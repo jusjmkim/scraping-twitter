@@ -3,7 +3,7 @@ require_relative './spec_helper'
 describe ScrapingTwitter do
 
   # Testing with Chris's Twitter
-   let!(:twitter_scrape){ScrapingTwitter.new}
+  let!(:twitter_scrape){ScrapingTwitter.new}
 
   describe "#initialize" do
     it "contains twitter of student instance" do
