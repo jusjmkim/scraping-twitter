@@ -8,8 +8,8 @@ class ScrapingTwitter
 
   def student_tweets 
     student_tweets = @student_twitters.collect do |twitter_profile|
-      page = Nokogiri::HTML(open("http://twitter.com/#{twitter_profile}"))
-      tweets = page.search("div.ProfileTweet-contents")
+      page = Nokogiri::HTML(open("#{twitter_profile}"))
+      tweets = page.search("p.ProfileTweet-text").collect{|tweet| tweet.text.strip}.flatten[0]
     end 
   end   
 
