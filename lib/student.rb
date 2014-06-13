@@ -10,7 +10,7 @@ class Student
 
   def initialize(profile)
     @profile = profile
-    @doc = Nokogiri::HTML(open(profile_url))
+    @doc = Nokogiri::HTML(open(profile))
     @@all << self
   end
 
