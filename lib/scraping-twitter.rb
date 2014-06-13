@@ -1,6 +1,4 @@
 class ScrapingTwitter
-<<<<<<< HEAD:lib/scraping-twitter.rb
-=======
 
   student_twitters = Array.new 
   student_profiles.each do |profile|
@@ -19,5 +17,4 @@ class ScrapingTwitter
   end   
   array_into_hash(:tweets,student_tweets,@@students)
 
->>>>>>> scraping twitter:scraping-twitter.rb
 end  
