@@ -12,7 +12,7 @@ describe ScrapingStudent do
   describe "#scrape_student_urls" do
     it "should return an array of student profile urls" do
       scraper.scrape_student_urls
-      expect(scraper.student_profiles).to include("http://ruby005.students.flatironschool.com/students/chriscallahan.html")
+      expect(scraper.student_urls).to include("http://ruby005.students.flatironschool.com/students/chriscallahan.html")
     end
   end
 
