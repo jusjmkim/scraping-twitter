@@ -13,4 +13,8 @@ class ScrapingTwitter
     end 
   end   
 
+  def create_tweet_instances
+    student_tweets.collect {|tweets| Twitter.new(student_tweets)}
+  end   
+
 end  
