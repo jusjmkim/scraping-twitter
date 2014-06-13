@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+
+puts "We are going to scrape all of Ruby005's twitters... on the command line!"
