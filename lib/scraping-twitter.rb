@@ -4,7 +4,6 @@ class ScrapingTwitter
 
   def initialize
     @student_twitters = Student.all.collect{|student| student.twitter}
-    student_tweets
   end
 
   def student_tweets 
