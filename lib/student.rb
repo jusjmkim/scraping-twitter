@@ -8,9 +8,9 @@ class Student
     @@all
   end
 
-  def initialize(profile)
-    @profile = profile
-    @doc = Nokogiri::HTML(open(profile_url))
+  def initialize(student_profile)
+    @student_profile = student_profile
+    @doc = Nokogiri::HTML(open(student_profile))
     @@all << self
   end
 
