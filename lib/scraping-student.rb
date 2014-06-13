@@ -15,7 +15,7 @@ class ScrapingStudent
   end
 
   def create_student_instances
-    student_profiles.each { |profile| Student.new(profile)}
+    student_profiles.collect { |profile| Student.new(profile)}
   end
 
   private
