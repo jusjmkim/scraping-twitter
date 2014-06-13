@@ -4,10 +4,10 @@ require_relative '../config/environment'
 
 puts "We are going to scrape all of Ruby005's twitters... on the command line!"
 
-# ruby_005_index_page = ScrapingStudent.new("http://ruby005.students.flatironschool.com/")
+ruby_005_index_page = ScrapingStudent.new("http://ruby005.students.flatironschool.com/")
 
-# all_profile_urls = ruby_005_index_page.scrape_student_urls
+all_profile_urls = ruby_005_index_page.scrape_student_urls
 
-# all_students = ruby_005_index_page.create_student_instances
+all_students = ruby_005_index_page.create_student_instances
 
 # binding.pry
