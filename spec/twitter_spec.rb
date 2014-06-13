@@ -10,8 +10,8 @@ describe Twitter do
   end
 
   describe "#initialize" do
-    it 'accepts the students\' tweets' do
-      expect(student_tweets).to eq(["Hi, I'm a tweet!","I'm also a tweet!","Hello, world!"])
+    it 'accepts the students\' tweets as an argument' do
+      expect(twitter.student_tweets).to eq(["Hi, I'm a tweet!","I'm also a tweet!","Hello, world!"])
     end
   end  
 
@@ -21,9 +21,9 @@ describe Twitter do
     end   
   end   
 
-  describe "#keyword_count" do
-    it 'outputs the number of times a keyword is included in a tweet' do
-      expect(twitter("also")).to eq(1) 
+  describe "#tweets_that_include" do
+    it 'outputs the tweets that include a certain word' do
+      expect(twitter.tweets_that_include("also")).to eq(["I'm also a tweet!"]) 
     end
   end   
 end   

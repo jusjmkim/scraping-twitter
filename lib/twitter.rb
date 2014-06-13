@@ -18,9 +18,8 @@ class Twitter
     @student_tweets.length 
   end
 
-  def keyword_count(keyword)
-    keyword_array = @student_tweets.split(" ").collect{|word| word if word == keyword}.compact
-    keyword_array.length
+  def tweets_that_include(word)
+    word_array = @student_tweets.collect{|tweet| tweet if tweet.split(" ").include?(word)}.compact
   end   
     
 end 
