@@ -17,8 +17,10 @@ describe ScrapingStudent do
   end
 
   describe "#create_student_instances" do
-    scraper.create_student_instances
-    expect(scraper.create_student_instances.first).to be_an_instance_of(Student)
+    it "should make an array of Student objects" do
+      scraper.create_student_instances
+      expect(scraper.create_student_instances.first).to be_an_instance_of(Student)
+    end
   end  
 
 end
