@@ -1,6 +1,7 @@
 require_relative './spec_helper'
 
 describe ScrapingTwitter do
+
   # Testing with Chris's Twitter
    let!(:twitter_scrape){ScrapingTwitter.new}
 
