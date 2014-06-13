@@ -1,6 +1,6 @@
 class ScrapingTwitter
 
-  attr_reader :student_tweets 
+  attr_reader :student_twitters, :student_tweets 
 
   def initialize
     @student_twitters = Student.all.collect{|student| student.twitter}
