@@ -1,7 +1,7 @@
 class ScrapingStudent
 
   attr_accessor :index_url
-  attr_reader :student_profiles, :doc
+  attr_reader :student_urls, :doc
 
   def initialize(index_url)
     @index_url = index_url
@@ -9,19 +9,19 @@ class ScrapingStudent
     scrape_student_profiles
   end
 
-  def scrape_student_profiles
-    @student_profiles ||= doc.search("div.blog-thumb").css("a").collect { |link|
-      normalize_student_profiles(link["href"])}.uniq
+  def scrape_student_urls
+    @student_urls ||= doc.search("div.blog-thumb").css("a").collect { |link|
+      normalize_student_urls(link["href"])}.uniq
   end
 
-  def scrape_students
-    student_profiles.collect { |profile| Student.new(profile)}
+  def create_student_instances
+    student_profiles.each { |profile| Student.new(profile)}
   end
 
   private
 
-  def normalize_student_profiles(profile)
-    profile.start_with?("http://") ? profile : "#{index_url}#{profile}"
+  def normalize_student_urls(url)
+    url.start_with?("http://") ? url : "#{index_url}#{url}"
   end
 
 end

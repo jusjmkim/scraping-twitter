@@ -15,7 +15,7 @@ class Student
   end
 
   def name
-      @name ||= doc.search("div.page-title h4").text
+    @name ||= doc.search("div.page-title h4").text
   end
 
   def twitter
