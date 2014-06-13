@@ -16,6 +16,10 @@ describe ScrapingTwitter do
     end
   end
 
-  describe "#create_tweet_instances"
+  describe "#create_tweet_instances" do
+    it "should make an array of twitter instances" do
+      expect(twitter_scrape.create_tweet_instances.first).to be_an_instance_of(Twitter)
+    end
+  end
 
 end
