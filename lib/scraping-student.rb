@@ -25,3 +25,4 @@ class ScrapingStudent
   end
 
 end
+
