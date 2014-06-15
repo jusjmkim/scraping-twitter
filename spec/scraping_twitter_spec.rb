@@ -3,7 +3,9 @@ require_relative './spec_helper'
 describe ScrapingTwitter do
 
   # Testing with Chris's Twitter
-   let!(:twitter_scrape){ScrapingTwitter.new}
+  let!(:index_scraper){ScrapingStudent.new("http://ruby005.students.flatironschool.com/")}
+  let!(:student){Student.new("http://ruby005.students.flatironschool.com/students/chriscallahan.html")}
+  let!(:twitter_scrape){ScrapingTwitter.new}
 
   describe "#initialize" do
     it "contains twitter of student instance" do
@@ -13,7 +15,7 @@ describe ScrapingTwitter do
 
   describe "#student_tweets" do
     it "contains tweets of students" do
-      expect(twitter_scrape.time_stamp[1].first).to include("1402606534")
+      expect(twitter_scrape.time_stamp[1]).to include("1402606534")
     end
   end
 
