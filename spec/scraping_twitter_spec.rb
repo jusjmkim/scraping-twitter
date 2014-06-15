@@ -13,7 +13,7 @@ describe ScrapingTwitter do
 
   describe "#student_tweets" do
     it "contains tweets of students" do
-      expect(twitter_scrape.student_tweets[17]).to eq("New blog post about using abstraction and hashes to sort a music collection http://callahanchris.github.io/blog/2014/06/09/abstraction-and-music-library-sorting/ … @aviflombaum")
+      expect(twitter_scrape.time_stamp[1].first).to include("1402606534")
     end
   end
 
