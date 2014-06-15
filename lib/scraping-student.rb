@@ -7,6 +7,7 @@ class ScrapingStudent
     @index_url = index_url
     @doc = doc = Nokogiri::HTML(open(index_url))
     scrape_student_urls
+    create_student_instances
   end
 
   def scrape_student_urls
