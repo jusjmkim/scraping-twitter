@@ -16,14 +16,14 @@ class ScrapingTwitter
   end
 
   def time_stamp
-    time_stamps ||= @student_twitters.collect { |twitter_profile|
+    time_stamps ||= @student_twitters.collect do |twitter_profile|
       page = Nokogiri::HTML(open("#{twitter_profile}"))
       time_stamp = page.search("span.js-short-timestamp").collect{|stamp| stamp.attribute("data-time").value}
-    }[1].first
+    end
   end
 
   def create_tweet_instances
-    student_tweets.collect {|tweets| Twitter.new(student_tweets)}
+    student_tweets.collect {|tweets| Twitter.new(student_tweets, time_stamp)}
   end   
 
 end

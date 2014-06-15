@@ -9,8 +9,13 @@ class Twitter
     @@all
   end
 
-  def initialize(student_tweets)
+  def ==(other_tweet)
+    self.time_stamp == other_tweet.time_stamp
+  end
+
+  def initialize(student_tweets, time_stamp)
     @student_tweets = student_tweets
+    @time_stamp = time_stamp
     @@all << self 
   end   
 
